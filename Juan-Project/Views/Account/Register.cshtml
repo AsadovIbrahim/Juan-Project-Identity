@@ -1,0 +1,40 @@
+﻿@model RegisterVM
+
+
+<!-- Register Content Start -->
+<div class="col-lg-6 container">
+    <div class="login-reg-form-wrap signup-form">
+        <h2>Sign up Form</h2>
+        <form asp-action="Register">
+            <div class="single-input-item">
+                <input asp-for="FullName" placeholder="Full Name" required />
+                <span class="text-danger" asp-validation-for="FullName"></span>
+            </div>
+            <div class="single-input-item">
+                <input asp-for="Email" placeholder="Enter your Email" required />
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="single-input-item">
+                        <input asp-for="Password" placeholder="Enter your Password" required />
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-input-item">
+                        <input asp-for="ConfirmPassword" placeholder="Repeat your Password" required />
+                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-input-item">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="single-input-item">
+                    <button class="btn">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Register Content End -->
